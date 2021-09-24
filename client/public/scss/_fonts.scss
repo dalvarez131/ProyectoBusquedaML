@@ -1,0 +1,78 @@
+$font-family-black: "Robotto-Black";
+$font-family-bold: "Robotto-Bold";
+$font-family-light: "Robotto-Light";
+$font-family-medium: "Robotto-Medium";
+$font-family-regular: "Robotto-Regular";
+$font-family-thin: "Robotto-Thin";
+
+.font-family-black {
+  font-family: $font-family-black;
+}
+
+.font-family-bold {
+  font-family: $font-family-bold;
+}
+
+.font-family-light {
+  font-family: $font-family-light;
+}
+
+.font-family-medium {
+  font-family: $font-family-medium;
+}
+
+.font-family-regular {
+  font-family: $font-family-regular;
+}
+
+.font-family-thin {
+  font-family: $font-family-thin;
+}
+
+@font-face {
+  font-family: $font-family-black;
+  src: url("/public/fonts/Roboto-Black.ttf") format("tff"),
+    url("/public/fonts/Roboto-Black.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family-bold;
+  src: url("/public/fonts/Roboto-Bold.ttf") format("tff"),
+    url("/public/fonts/Roboto-Bold.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family-light;
+  src: url("/public/fonts/Roboto-Light.ttf") format("tff"),
+    url("/public/fonts/Roboto-Light.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family-medium;
+  src: url("/public/fonts/Roboto-Medium.ttf") format("tff"),
+    url("/public/fonts/Roboto-Medium.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family-regular;
+  src: url("/public/fonts/Roboto-Regular.ttf") format("tff"),
+    url("/public/fonts/Roboto-Regular.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family-thin;
+  src: url("/public/fonts/Roboto-Thin.ttf") format("tff"),
+    url("/public/fonts/Roboto-Thin.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}

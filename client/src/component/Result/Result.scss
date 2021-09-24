@@ -1,0 +1,40 @@
+@import "../../../public/scss/fonts";
+
+$background-color-container: #ebebeb;
+$background-color-result: #ffffff;
+$border-color-result: #eeeeee;
+
+.ml-search {
+  background-color: $background-color-container;
+  
+  &__results {
+    background-color: $background-color-result;
+    margin: 2vw 10vw;
+    padding: 0;
+  }
+
+  &__item {
+    padding: 1vw 1vw;
+    list-style: none;
+    border-bottom: thin solid $border-color-result;
+  }
+
+  &__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+  }
+
+  &__info {
+    display: inline-block;
+    vertical-align:top;
+    padding-left: 1vw;
+    padding-right: 2vw;
+  }
+}
+
+.ml-search h3 {
+  font-family: $font-family-thin;
+  color:red;
+  //font-family: 'Roboto', sans-serif;
+}
