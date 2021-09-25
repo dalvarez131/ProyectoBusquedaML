@@ -5,4 +5,13 @@ $background-color-search: #ffe600;
 .ml-navbar {
   background-color: $background-color-search;
   height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  &__img {
+    margin-right: 30px;
+  }
 }

@@ -13,7 +13,9 @@ import logo from "../../../public/assets/icons/Logo_ML.png";
 const Navbar = () => {
   return (
     <div className="ml-navbar">
-      <img src={logo} alt="Logo" />
+      <a href="/" >
+      <img className="ml-navbar__img" src={logo} alt="Mercado Libre Logo" />
+      </a>
       <SearchInput />
     </div>
   );

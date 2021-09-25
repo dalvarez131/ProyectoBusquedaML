@@ -10,7 +10,7 @@ import "./App.scss";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Product from "./component/Product";
-import Search from "./component/Search";
+import Result from "./component/Result";
 
 
 export const history = createBrowserHistory({
@@ -23,8 +23,8 @@ const App = () => {
       <Navbar/>
       <Router history={history}>
         <Route exact path="/" component={Home} />
-        <Route exact path="/items" component={Search} />
-        <Route exact path="/items/:id" component={Product} />
+        <Route exact path="/items" component={Result} />
+        <Route strict path="/items/:id" component={Product} />
       </Router>
     </div>
   );

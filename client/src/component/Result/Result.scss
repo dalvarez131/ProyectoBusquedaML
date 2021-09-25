@@ -1,20 +1,26 @@
-@import "../../../public/scss/fonts";
-
 $background-color-container: #ebebeb;
 $background-color-result: #ffffff;
 $border-color-result: #eeeeee;
+$color-categories: #999999;
+$color-text-dark: #666666;
 
-.ml-search {
+.ml-result {
   background-color: $background-color-container;
   
-  &__results {
+  &__categoria {
+    margin-left: 13vw;
+    padding: 16px 0;
+    color: $color-categories;
+  }
+
+  &__list {
     background-color: $background-color-result;
-    margin: 2vw 10vw;
+    margin: 0 13vw 2vw 13vw;
     padding: 0;
   }
 
   &__item {
-    padding: 1vw 1vw;
+    padding: 16px 16px 16px 16px;
     list-style: none;
     border-bottom: thin solid $border-color-result;
   }
@@ -23,18 +29,92 @@ $border-color-result: #eeeeee;
     width: 180px;
     height: 180px;
     border-radius: 4px;
+    @media (max-width: 667px) {
+      width: 100%;
+    }
   }
 
   &__info {
     display: inline-block;
-    vertical-align:top;
-    padding-left: 1vw;
-    padding-right: 2vw;
-  }
-}
+    vertical-align: top;
+    width: calc(100% - 14vw);
+    padding: 2vw 2vw 0 16px;
 
-.ml-search h3 {
-  font-family: $font-family-thin;
-  color:red;
-  //font-family: 'Roboto', sans-serif;
+    @media (max-width: 1638px) {
+      width: calc(100% - 15vw);
+    }
+    @media (max-width: 1500px) {
+      width: calc(100% - 16vw);
+    }
+    @media (max-width: 1386px) {
+      width: calc(100% - 17vw);
+    }
+    @media (max-width: 1287px) {
+      width: calc(100% - 18vw);
+    }
+    @media (max-width: 1200px) {
+      width: calc(100% - 19vw);
+    }
+    @media (max-width: 1125px) {
+      width: calc(100% - 20vw);
+    }
+    @media (max-width: 1059px) {
+      width: calc(100% - 21vw);
+    }
+    @media (max-width: 1000px) {
+      width: calc(100% - 22vw);
+    }
+    @media (max-width: 948px) {
+      width: calc(100% - 23vw);
+    }
+    @media (max-width: 900px) {
+      width: calc(100% - 24vw);
+    }
+    @media (max-width: 861px) {
+      width: calc(100% - 25vw);
+    }
+    @media (max-width: 819px) {
+      width: calc(100% - 26vw);
+    }
+    @media (max-width: 783px) {
+      width: calc(100% - 27vw);
+    }
+    @media (max-width: 750px) {
+      width: calc(100% - 28vw);
+    }
+    @media (max-width: 720px) {
+      width: calc(100% - 29vw);
+    }
+    @media (max-width: 693px) {
+      width: calc(100% - 30vw);
+    }
+    @media (max-width: 667px) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    color: $color-text-dark;
+  }
+
+  &__shippingLogo {
+    margin: 0 8px;
+  }
+
+  &__location {
+    font-size: 12px;
+    text-align: right;
+    color: $color-categories;
+    height: 32px;
+
+    @media (max-width: 948px) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    color: $color-text-dark;
+  }
 }
