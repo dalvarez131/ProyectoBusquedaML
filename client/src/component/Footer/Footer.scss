@@ -1,0 +1,11 @@
+@import "../../../public/scss/all";
+
+.ml-footer {
+  background-color: $background-color-result;
+  position: sticky;
+  bottom: 0px;
+  padding: 1vw 0 1vw 13vw;
+  width: 100%;
+  color: $color-text-dark;
+  border-top: thin solid $background-color-container;
+}

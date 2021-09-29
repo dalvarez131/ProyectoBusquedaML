@@ -12,20 +12,21 @@ import shippingLogo from "../../../public/assets/icons/ic_shipping.png";
 import { useGetQueryByNameQuery } from '../../services/queryApi';
 
 /* Others */
-import { history } from "../../App";
+import { history } from "../../index";
 
 const Result = () => {
   const { searchInput } = useSelector(state => state);
-  const { data: { results:items = [] } = {} } = useGetQueryByNameQuery(searchInput);
+  const { data: { results:items = [] } = {}, isSuccess } = useGetQueryByNameQuery(searchInput);
 
   const handleOnClick = (id) => {
     history.push(`/items/${id}`);
   };
 
   return (
-    <div>
+    <>
       <section className="ml-result">
         <h5 className="ml-result__categoria">Electrónica, Audio y Video {'>'} iPod {'>'} Reproductores {'>'} iPod touch {'>'} <strong>32 GB</strong></h5>
+        {!!items.length && isSuccess &&
         <ul className="ml-result__list">
           {items.slice(0, 4).map((item) =>
           <li className="ml-result__item" key={item.id} onClick={ () => handleOnClick(item.id) } >
@@ -41,8 +42,13 @@ const Result = () => {
           </li>
           )}
         </ul>
+        }
+        {!items.length && isSuccess &&
+        <h3 className="ml-result__noResult">
+          No se encuentran resultados
+        </h3>}
       </section>
-    </div>
+    </>
   );
 }
 

@@ -9,7 +9,7 @@ import "./SearchInput.scss";
 import searchIcon from "../../../../public/assets/icons/ic_Search.png";
 
 /* Others */
-import { history } from "../../../App";
+import { history } from "../../../index";
 import { updateSearchInputValue } from "./searchInputSlice";
 
 
@@ -27,7 +27,6 @@ const SearchInput = () => {
     if (searchQuery) {
       history.push(`/items?search=${searchQuery}`);
       dispatch(updateSearchInputValue(searchQuery));
-      history.go(0);
     }  
   };
 

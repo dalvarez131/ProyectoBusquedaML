@@ -1,10 +1,4 @@
-@import "../../../public/scss/fonts";
-
-$background-color-container: #ebebeb;
-$background-color-result: #ffffff;
-$color-categories: #999999;
-$color-text-dark: #666666;
-$button-color: #3483fa;
+@import "../../../public/scss/all";
 
 .ml-product {
   background-color: $background-color-container;
@@ -17,8 +11,9 @@ $button-color: #3483fa;
 
   &__card {
     background-color: $background-color-result;
-    margin: 0 13vw 2vw 13vw;
+    margin: 0 13vw 0 13vw;
     padding: 0;
+    padding-bottom: 10px;
   }
 
   &__image {
@@ -94,6 +89,10 @@ $button-color: #3483fa;
     @media (max-width: 1295px) {
       width: 50%;
     }
+  }
+
+  &__button:hover {
+    background-color: #0665f5;
   }
 
   &__desc {

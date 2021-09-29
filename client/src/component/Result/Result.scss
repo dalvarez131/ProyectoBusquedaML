@@ -1,12 +1,8 @@
-$background-color-container: #ebebeb;
-$background-color-result: #ffffff;
-$border-color-result: #eeeeee;
-$color-categories: #999999;
-$color-text-dark: #666666;
+@import "../../../public/scss/all";
 
 .ml-result {
   background-color: $background-color-container;
-  
+
   &__categoria {
     margin-left: 13vw;
     padding: 16px 0;
@@ -15,7 +11,7 @@ $color-text-dark: #666666;
 
   &__list {
     background-color: $background-color-result;
-    margin: 0 13vw 2vw 13vw;
+    margin: 0 13vw 0 13vw;
     padding: 0;
   }
 
@@ -116,5 +112,10 @@ $color-text-dark: #666666;
 
   &__title {
     color: $color-text-dark;
+  }
+
+  &__noResult {
+    text-align: center;
+    color: $color-categories;
   }
 }
