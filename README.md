@@ -1,14 +1,10 @@
 ## Dependencies
-Enter in client folder, and type:
-
-### `npm i`
-
-Enter in server folder, and type:
+In the root of the project:
 
 ### `npm i`
 
 ## Script
-Enter in client folder, you can run:
+In the root of the project:
 
 ### `npm run dev`
 
