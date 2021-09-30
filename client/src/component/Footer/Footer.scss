@@ -8,4 +8,9 @@
   width: 100%;
   color: $color-text-dark;
   border-top: thin solid $background-color-container;
+
+  &__span {
+    margin-left: 15px;
+
+  }
 }

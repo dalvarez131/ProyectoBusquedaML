@@ -1,6 +1,7 @@
 /* External */
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router";
 
 /* Style */
 import "./Result.scss";
@@ -15,11 +16,15 @@ import { useGetQueryByNameQuery } from '../../services/queryApi';
 import { history } from "../../index";
 
 const Result = () => {
+  const location = useLocation();
+  const searchTermUrl = location.search.match(/(\?|\&)([^=]+)\=([^&]+)/)[3];
   const { searchInput } = useSelector(state => state);
-  const { data: { results:items = [] } = {}, isSuccess } = useGetQueryByNameQuery(searchInput);
+  const searchTerm = !!searchInput.searchQuery ? searchInput : {searchQuery: searchTermUrl};
+  const { data: { results:items = [] } = {}, isSuccess } = useGetQueryByNameQuery(searchTerm);
 
   const handleOnClick = (id) => {
     history.push(`/items/${id}`);
+    window.location.reload();
   };
 
   return (

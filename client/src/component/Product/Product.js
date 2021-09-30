@@ -1,5 +1,5 @@
 /* External */
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router";
 
 /* Style */
@@ -9,7 +9,6 @@ import "./Product.scss";
 import { useGetDescByIdQuery, useGetQueryByIdQuery } from '../../services/idApi';
 
 const Product = () => {
-  console.log(`AQUI`);
   const location = useLocation();
   const id = location.pathname.match(/\/([^\/]+)$/)[1];
   const { data: item = {} } = useGetQueryByIdQuery(id);
@@ -35,8 +34,6 @@ const Product = () => {
       maximumFractionDigits: 2
     })
   };
-  console.log(`[product] item.length: ${!!item} , desc.length: ${!!desc}`);
-  console.log(`desc.length: ${JSON.stringify(desc)}`);
 
   return (
     <div>

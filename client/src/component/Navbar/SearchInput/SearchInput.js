@@ -27,6 +27,7 @@ const SearchInput = () => {
     if (searchQuery) {
       history.push(`/items?search=${searchQuery}`);
       dispatch(updateSearchInputValue(searchQuery));
+      window.location.reload();
     }  
   };
 

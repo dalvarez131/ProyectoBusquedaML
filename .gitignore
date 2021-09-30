@@ -1,4 +1,4 @@
 serve/node_modules/
 client/node_modules/
-client/public/
+client/public/js
 /.vscode/
