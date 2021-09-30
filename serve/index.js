@@ -3,7 +3,7 @@ const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 const path = require('path');
-const staticMiddleware = express.static("../client/public");
+const staticMiddleware = express.static("./client/public");
 
 //const query = require("./query.js");
 // console.log(query);

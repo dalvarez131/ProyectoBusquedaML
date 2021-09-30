@@ -31,31 +31,31 @@ $font-family-thin: "Robotto-Thin";
 
 @font-face {
   font-family: $font-family-black;
-  src: url("/public/fonts/Roboto-Black.ttf") format("truetype");
+  src: url("/client/public/fonts/Roboto-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: $font-family-bold;
-  src: url("/public/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("/client/public/fonts/Roboto-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: $font-family-light;
-  src: url("/public/fonts/Roboto-Light.ttf") format("truetype");
+  src: url("/client/public/fonts/Roboto-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: $font-family-medium;
-  src: url("/public/fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("/client/public/fonts/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: $font-family-regular;
-  src: url("/public/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("/client/public/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: $font-family-thin;
-  src: url("/public/fonts/Roboto-Thin.ttf") format("truetype");
+  src: url("/client/public/fonts/Roboto-Thin.ttf") format("truetype");
 }
