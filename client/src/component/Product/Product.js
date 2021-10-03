@@ -1,5 +1,5 @@
 /* External */
-import React from "react";
+import React, {useEffect} from "react";
 import { useLocation } from "react-router";
 
 /* Style */
@@ -7,12 +7,21 @@ import "./Product.scss";
 
 /* Services */
 import { useGetDescByIdQuery, useGetQueryByIdQuery } from '../../services/idApi';
+import { useLazyGetCategoryByIdQuery } from '../../services/categoryApi';
 
 const Product = () => {
   const location = useLocation();
   const id = location.pathname.match(/\/([^\/]+)$/)[1];
   const { data: item = {} } = useGetQueryByIdQuery(id);
   const { data: desc = {} }  = useGetDescByIdQuery(id);
+  const [ getCategoryString, { data: { name: categoryName = "" } = {} }] = useLazyGetCategoryByIdQuery();
+
+  useEffect(() => {
+    const updateCategoryStringTimeOut = setTimeout(() => {
+      getCategoryString(item.category_id);
+    }, 200);
+    return () => clearTimeout(updateCategoryStringTimeOut);
+  },[getCategoryString, item])
 
   const condition = (item) => {
     if (!item) return "";
@@ -38,7 +47,7 @@ const Product = () => {
   return (
     <div>
       <section className="ml-product">
-        <h5 className="ml-product__categoria">Electrónica, Audio y Video {'>'} iPod {'>'} Reproductores {'>'} iPod touch {'>'} <strong>32 GB</strong></h5>
+        <h5 className="ml-product__categoria">{categoryName}</h5>
         {!!item.id &&
           <div className="ml-product__card">
             <img className="ml-product__image" src={item?.secure_thumbnail} alt={`Imagen de ${item?.title}`} />
